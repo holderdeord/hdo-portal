@@ -6,7 +6,8 @@
     "start": "./node_modules/babel-cli/bin/babel-node.js server/server.js",
     "dev": "./node_modules/babel-cli/bin/babel-node.js server/dev-server.js",
     "lint": "eslint components",
-    "build": "webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe"
+    "build": "webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe",
+    "deploy": "ssh hdo02@holderdeord.no 'cd /webapps/hdo-transcript-search && git pull --ff-only origin master && npm run build && sudo restart hdo-portal'"
   },
   "author": "jari@holderdeord.no",
   "license": "BSD-3-Clause",
