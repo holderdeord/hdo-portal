@@ -20,6 +20,8 @@ app.get('/portal*', (req, res) => {
     res.render('index-prod', {hash});
 })
 
-app.listen(3000, function() {
-    console.log('Server is listening on port 3000');
+const port = +(process.env.HTTP_PORT || 3000);
+
+app.listen(, function() {
+    console.log(`hdo-portal is listening on port ${port}`);
 });
