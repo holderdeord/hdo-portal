@@ -1,5 +1,8 @@
+var autoprefixer = require('autoprefixer')
+var precss = require('precss')
+
 module.exports = {
-    entry: './src/js/components/App.js',
+    entry: './src/js/components/Routes.js',
 
     output: {
         path: './build',
@@ -8,9 +11,8 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.scss$/, loader: "style!css!sass" },
-
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.scss$/, loader: 'style!css!postcss!sass' },
+            { test: /\.css$/, loader: 'style!css' },
 
             {
                 test: /\.js$/,
@@ -22,9 +24,25 @@ module.exports = {
             },
 
             {
+                test:   /\.md$/,
+                loader: 'html!remarkable'
+            },
+
+            {
                 test: /\.json$/,
                 loader: 'json'
             }
         ]
+    },
+
+    postcss: function() {
+        return [autoprefixer, precss]
+    },
+
+    remarkable: {
+        preset: 'full',
+        linkify: true,
+        typographer: true
     }
+
 };

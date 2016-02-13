@@ -1,1 +1,144 @@
 @import '~hdo-bootstrap';
+
+$header-height: 6rem;
+
+nav {
+    header {
+        font-family: $font-family-serif;
+
+        .hdo-logo {
+            margin-top: 0.5rem;
+            padding-top: $header-height / 2;
+            text-align: center;
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: auto 2.5rem;
+            font-weight: 600;
+        }
+
+        .nav {
+            margin-top: $header-height / 3;
+            padding: 0 1rem;
+            margin-right: -1rem;
+
+            &:hover {
+                background-color: $hdo-highlight-color;
+                color: black;
+            }
+        }
+    }
+}
+
+main {
+    // margin-top: $header-height;
+    // border: 1px solid #ddd;
+}
+
+.hdo-card {
+  background-color: #fff;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+  .hdo-card-header {
+    background-color: #fcfcfc;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 1px rgba(0,0,0,.12);
+
+    $border-color: #ddd;
+
+    &.top-border {
+      border-top: 1px solid $border-color;
+    }
+
+    &.bottom-border {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+.text {
+    $default-padding: 1rem;
+
+    h1, h2, h3, h4, h5 {
+        padding: $default-padding;
+        background-color: #fcfcfc;
+    }
+
+    p {
+        padding: 0 $default-padding;
+    }
+
+    padding-bottom: $default-padding;
+}
+
+footer {
+    display: block;
+    position: relative;
+    margin: 4rem 0;
+    text-align: center;
+    opacity: 0.8;
+
+    .hdo-logo {
+        margin-top: 1rem;
+        padding-top: 3rem;
+        background-position: 50% 0;
+        margin: 0;
+
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: auto 2.5rem;
+    }
+
+    .links {
+        padding-top: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.services {
+  a {
+    text-decoration: none;
+  }
+
+  .service {
+    filter: grayscale(0.4);
+    transition: all 0.3s ease;
+    color: black;
+
+    text-align: center;
+
+    .img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 200px;
+      background-position: 50% 50%;
+    }
+
+    .description {
+        font-weight: 300;
+        min-height: $line-height * 2em;
+    }
+
+    &:hover {
+      filter: none;
+      background-color: desaturate($hdo-highlight-color, 10%);
+      // a { color: #eee; }
+    }
+  }
+}
+
+.person {
+   img {
+        border-radius: 50%;
+        background: #ffffff 50% 0% no-repeat;
+        margin-bottom: 20px;
+        box-shadow: 0 0 0 4px #fff,0 0 0 5px rgba(0,0,0,0.1),0 0 0 9px #fff,0 0 0 10px rgba(0,0,0,0.033);
+        width: 128px;
+        height: 128px;
+    }
+}

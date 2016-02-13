@@ -5,6 +5,7 @@ var config = require('./../webpack.dev.config');
 
 new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
+    debug: true,
     hot: true,
     historyApiFallback: true,
     contentBase: path.join(__dirname, '/../public')

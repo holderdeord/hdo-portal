@@ -1,13 +1,16 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var autoprefixer = require('autoprefixer')
+var precss = require('precss')
+
 module.exports = {
     devtool: 'eval',
 
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
-        './src/js/components/App'
+        './src/js/components/Routes'
     ],
 
     output: {
@@ -18,18 +21,18 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.scss$/, loader: "style!css!sass" },
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.scss$/, loader: 'style!css!postcss!sass' },
+            { test: /\.css$/, loader: 'style!css' },
 
             {
                 test: /\.js$/,
                 loaders: ['react-hot', 'babel'],
-                include: path.join(__dirname, 'src/js')
+                include: path.join(__dirname, 'src')
             },
 
             {
-                test: /\.json$/,
-                loader: 'json'
+                test:   /\.md$/,
+                loader: 'html!remarkable'
             }
         ]
     },
@@ -37,5 +40,15 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
+
+    postcss: function() {
+        return [autoprefixer, precss]
+    },
+
+    remarkable: {
+        preset: 'full',
+        linkify: true,
+        typographer: true
+    }
 
 };
