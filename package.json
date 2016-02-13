@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Portal to HDO's services",
   "scripts": {
-    "prestart": "npm run task",
-    "start": "node server/server.js",
-    "dev": "node server/dev-server.js",
+    "start": "babel-node server/server.js",
+    "dev": "babel-node server/dev-server.js",
     "lint": "eslint components",
-    "task": "webpack"
+    "build": "webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe"
   },
   "author": "jari@holderdeord.no",
   "license": "BSD-3-Clause",
@@ -26,6 +25,7 @@
     "babel-core": "^6.0.20",
     "babel-eslint": "^4.1.3",
     "babel-loader": "^6.0.1",
+    "babel-polyfill": "^6.5.0",
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
@@ -36,6 +36,7 @@
     "hdo-bootstrap": "git+https://github.com/holderdeord/hdo-bootstrap",
     "html-loader": "^0.4.0",
     "isomorphic-fetch": "^2.2.1",
+    "lodash-express": "0.0.3",
     "lodash.chunk": "^4.0.1",
     "lodash.partition": "^4.1.0",
     "node-sass": "^3.4.2",

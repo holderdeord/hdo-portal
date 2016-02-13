@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
@@ -6,7 +8,8 @@ import {
     Route,
     IndexRoute,
     Link,
-    browserHistory as history
+    browserHistory as history,
+    Redirect
 } from 'react-router'
 
 import App from './App'
@@ -17,9 +20,11 @@ class Routes extends Component {
     render() {
         return (
             <Router history={history}>
-                <Route path="/" component={App}>
+                <Redirect path="/" to="/portal" />
+
+                <Route path="/portal" component={App}>
                   <IndexRoute component={Front} />
-                  <Route path="/om-oss" component={AboutUs} />
+                  <Route path="/portal/om-oss" component={AboutUs} />
                 </Route>
             </Router>
         )

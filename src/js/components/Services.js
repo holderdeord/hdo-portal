@@ -21,7 +21,7 @@ export default class Services extends Component {
         return (
             <div className="services">
                 {chunk(services, 2).map(serviceGroup => (
-                    <div className="row">
+                    <div className="row" key={serviceGroup.map(e => e.title).join()}>
                         {serviceGroup.map(service => (
                             <div className="col-lg-6" key={service.title}>
                                 <div className="service hdo-card m-y-1">

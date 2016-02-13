@@ -61,12 +61,12 @@ main {
 .text {
     $default-padding: 1rem;
 
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5 {
         padding: $default-padding;
-        background-color: #fcfcfc;
+        @extend .hdo-card-header;
     }
 
-    h5, h6 {
+    h6 {
         padding: $default-padding;
     }
 
@@ -112,7 +112,6 @@ footer {
     .service {
         filter: grayscale(0.4);
         transition: all 0.3s ease;
-        color: black;
 
         text-align: center;
 
@@ -131,7 +130,7 @@ footer {
       &:hover {
         filter: none;
         background-color: desaturate($hdo-highlight-color, 10%);
-        // a { color: #eee; }
+        a { color: black; }
       }
     }
 }

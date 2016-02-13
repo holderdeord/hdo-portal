@@ -1,12 +1,24 @@
-var express = require('express');
-var path = require('path');
-var app = express();
+import express from 'express';
+import path from 'path';
+import lodashExpress from 'lodash-express';
+import fs from 'fs';
 
-app.use(express.static(path.join(__dirname, './../')));
+const app = express();
+const staticPath = path.join(__dirname, '../build/');
 
-app.get('/', function(req,res) {
-    res.sendFile('/index.html');
+app.use(express.static(staticPath));
+lodashExpress(app, 'html');
+app.set('view engine', 'html');
+
+const hash = fs.readFileSync(path.join(staticPath, 'hash'));
+
+app.get('/', (req, res) => {
+    res.redirect('/portal')
 });
+
+app.get('/portal*', (req, res) => {
+    res.render('index-prod', {hash});
+})
 
 app.listen(3000, function() {
     console.log('Server is listening on port 3000');

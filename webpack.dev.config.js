@@ -4,6 +4,8 @@ var webpack = require('webpack');
 var autoprefixer = require('autoprefixer')
 var precss = require('precss')
 
+var writeHash = require('./src/js/utils/webpack-write-hash')
+
 module.exports = {
     devtool: 'eval',
 
@@ -14,9 +16,9 @@ module.exports = {
     ],
 
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'build'),
         filename: 'bundle.js',
-        publicPath: '/build/'
+        publicPath: '/'
     },
 
     module: {
@@ -38,7 +40,8 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        writeHash
     ],
 
     postcss: function() {

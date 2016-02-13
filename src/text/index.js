@@ -1,5 +1,7 @@
-import omOss from './om-oss.md';
+import hvaViGjor from './hva-vi-gjor.md';
+import vareVenner from './vare-venner.md';
 
 export default {
-    'om-oss': omOss
+    'hva-vi-gjor': hvaViGjor,
+    'vare-venner': vareVenner
 };

@@ -1,12 +1,14 @@
 var autoprefixer = require('autoprefixer')
 var precss = require('precss')
+var fs = require('fs')
+var writeHash = require('./src/js/utils/webpack-write-hash')
 
 module.exports = {
     entry: './src/js/components/Routes.js',
 
     output: {
         path: './build',
-        filename: 'bundle.js'
+        filename: 'bundle.[hash].js'
     },
 
     module: {
@@ -34,6 +36,12 @@ module.exports = {
             }
         ]
     },
+
+    plugins: [
+        // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb$/),
+        // new ExtractTextPlugin('bundle.[hash].css'),
+        writeHash
+    ],
 
     postcss: function() {
         return [autoprefixer, precss]

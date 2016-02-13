@@ -11,7 +11,7 @@ export default class App extends Component {
             <div>
                 <Header />
 
-                <main className="container">
+                <main>
                     {this.props.children}
                 </main>
 
