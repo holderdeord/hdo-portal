@@ -20,10 +20,14 @@ export default class People extends Component {
 
         return (
             <div className="hdo-card">
-                <h4 className="hdo-card-header p-a-1">Styret</h4>
+                <h2 className="hdo-card-header p-a-1">Hvem vi er</h2>
+
+                <h3 className="p-a-1">Styret</h3>
                 {this.renderGroup(board)}
 
-                <h4 className="hdo-card-header p-a-1">Bidragsytere</h4>
+                <hr />
+
+                <h3 className="p-a-1">Bidragsytere</h3>
                 {this.renderGroup(members)}
             </div>
         )

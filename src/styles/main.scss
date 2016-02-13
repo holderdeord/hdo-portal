@@ -35,35 +35,39 @@ main {
 }
 
 .hdo-card {
-  background-color: #fff;
-  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    background-color: #fff;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 
-  .hdo-card-header {
-    background-color: #fcfcfc;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: 0 1px rgba(0,0,0,.12);
+    .hdo-card-header {
+        background-color: #fcfcfc;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 1px rgba(0,0,0,.12);
 
-    $border-color: #ddd;
+        $border-color: #ddd;
 
-    &.top-border {
-      border-top: 1px solid $border-color;
+        &.top-border {
+            border-top: 1px solid $border-color;
+        }
+
+        &.bottom-border {
+            border-bottom: 1px solid $border-color;
+        }
     }
-
-    &.bottom-border {
-      border-bottom: 1px solid $border-color;
-    }
-  }
 }
 
 .text {
     $default-padding: 1rem;
 
-    h1, h2, h3, h4, h5 {
+    h1, h2, h3, h4 {
         padding: $default-padding;
         background-color: #fcfcfc;
+    }
+
+    h5, h6 {
+        padding: $default-padding;
     }
 
     p {
@@ -101,39 +105,39 @@ footer {
 }
 
 .services {
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+      }
 
-  .service {
-    filter: grayscale(0.4);
-    transition: all 0.3s ease;
-    color: black;
+    .service {
+        filter: grayscale(0.4);
+        transition: all 0.3s ease;
+        color: black;
 
-    text-align: center;
+        text-align: center;
 
-    .img {
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 200px;
-      background-position: 50% 50%;
+        .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            background-position: 50% 50%;
+        }
+
+        .description {
+            font-weight: 300;
+            // min-height: $line-height * 2em;
+        }
+
+      &:hover {
+        filter: none;
+        background-color: desaturate($hdo-highlight-color, 10%);
+        // a { color: #eee; }
+      }
     }
-
-    .description {
-        font-weight: 300;
-        min-height: $line-height * 2em;
-    }
-
-    &:hover {
-      filter: none;
-      background-color: desaturate($hdo-highlight-color, 10%);
-      // a { color: #eee; }
-    }
-  }
 }
 
 .person {
-   img {
+    img {
         border-radius: 50%;
         background: #ffffff 50% 0% no-repeat;
         margin-bottom: 20px;
