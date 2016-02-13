@@ -7,7 +7,7 @@
     "dev": "./node_modules/babel-cli/bin/babel-node.js server/dev-server.js",
     "lint": "eslint components",
     "build": "./node_modules/.bin/webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe",
-    "deploy": "ssh hdo@hdo02.holderdeord.no 'cd /webapps/hdo-portal && git pull --ff-only origin master && npm run build && sudo restart hdo-portal'"
+    "deploy": "ssh hdo@hdo02.holderdeord.no 'cd /webapps/hdo-portal && git pull --ff-only origin master && npm install && npm run build && mkdir -p tmp && touch tmp/restart.txt'"
   },
   "author": "jari@holderdeord.no",
   "license": "BSD-3-Clause",
