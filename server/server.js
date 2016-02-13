@@ -18,7 +18,16 @@ app.get('/', (req, res) => {
 
 app.get('/portal*', (req, res) => {
     res.render('index-prod', {hash});
-})
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.render('robots');
+});
+
+const oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
+app.get(oldPaths, (req, res) => res.redirect(`https://data.holderdeord.no${req.path}`));
+
+
 
 const port = +(process.env.HTTP_PORT || 3000);
 
