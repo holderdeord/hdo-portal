@@ -1,17 +1,17 @@
-import express from 'express';
-import path from 'path';
-import lodashExpress from 'lodash-express';
-import fs from 'fs';
+var express = require('express');
+var path = require('path');
+var lodashExpress = require('lodash-express');
+var fs = require('fs');
 
-const app = express();
-const staticPath = path.join(__dirname, '../build/');
+var app = express();
+var staticPath = path.join(__dirname, '../build/');
 
 app.use(express.static(staticPath));
 lodashExpress(app, 'html');
 app.set('view engine', 'html');
 app.set('etag', false);
 
-app.use((req, res, next) => {
+app.use(function(req, res, next) {
     if (!res.getHeader('Cache-Control')) {
         res.setHeader('Cache-Control', 'public, max-age=30');
     }
@@ -19,24 +19,24 @@ app.use((req, res, next) => {
     next();
 });
 
-const hash = fs.readFileSync(path.join(staticPath, 'hash'));
+var hash = fs.readFileSync(path.join(staticPath, 'hash'));
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
     res.redirect('/portal')
 });
 
-app.get('/portal*', (req, res) => {
+app.get('/portal*', function(req, res) {
     res.render('index-prod', {hash});
 });
 
-app.get('/robots.txt', (req, res) => {
+app.get('/robots.txt', function(req, res) {
     res.render('robots');
 });
 
-const oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
+var oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
 app.get(oldPaths, (req, res) => res.redirect(`https://data.holderdeord.no${req.path}`));
 
-const port = +(process.env.HTTP_PORT || 3000);
+var port = +(process.env.HTTP_PORT || 3000);
 
 app.listen(port, function() {
     console.log(`hdo-portal is listening on port ${port}`);
