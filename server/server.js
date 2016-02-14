@@ -34,7 +34,9 @@ app.get('/robots.txt', function(req, res) {
 });
 
 var oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
-app.get(oldPaths, (req, res) => res.redirect(`https://data.holderdeord.no${req.path}`));
+app.get(oldPaths, function(req, res) {
+    res.redirect(`https://data.holderdeord.no${req.path}`)
+});
 
 var port = +(process.env.HTTP_PORT || 3000);
 
