@@ -6,7 +6,9 @@ export default class Services extends Component {
     state = { services: [] };
 
     componentDidMount() {
-        fetch('https://files.holderdeord.no/data/hdo/services.json?service=portal')
+        const service = window.location.host.includes('localhost') ? 'local' : 'portal';
+
+        fetch(`https://files.holderdeord.no/data/hdo/services.json?service=${service}`)
             .then(res => res.ok ? res.json() : [])
             .then(services => this.setState({services: this.clean(services)}));
     }

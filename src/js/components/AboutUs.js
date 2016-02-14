@@ -6,13 +6,23 @@ export default class AboutUs extends Component {
     render() {
         return (
             <div className="container">
-                <div className="hdo-card m-b-1">
-                    <Text name="hva-vi-gjor" />
+                <div className="row">
+                    <div className="col-lg-6 col-md-12">
+                        <div className="hdo-card m-b-1">
+                            <Text name="hva-vi-gjor" />
+                        </div>
+                    </div>
+
+                    <div className="col-lg-6 hidden-md-down">
+                        <div className="hdo-card m-b-1">
+                            <Text name="vare-venner" />
+                        </div>
+                    </div>
                 </div>
 
                 <People />
 
-                <div className="hdo-card m-y-1">
+                <div className="hdo-card m-y-1 hidden-lg-up">
                     <Text name="vare-venner" />
                 </div>
             </div>

@@ -9,6 +9,15 @@ const staticPath = path.join(__dirname, '../build/');
 app.use(express.static(staticPath));
 lodashExpress(app, 'html');
 app.set('view engine', 'html');
+app.set('etag', false);
+
+router.use((req, res, next) => {
+    if (!res.getHeader('Cache-Control')) {
+        res.setHeader('Cache-Control', 'public, max-age=30');
+    }
+
+    next();
+});
 
 const hash = fs.readFileSync(path.join(staticPath, 'hash'));
 
