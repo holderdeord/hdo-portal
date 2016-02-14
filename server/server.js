@@ -11,7 +11,7 @@ lodashExpress(app, 'html');
 app.set('view engine', 'html');
 app.set('etag', false);
 
-router.use((req, res, next) => {
+app.use((req, res, next) => {
     if (!res.getHeader('Cache-Control')) {
         res.setHeader('Cache-Control', 'public, max-age=30');
     }
@@ -35,8 +35,6 @@ app.get('/robots.txt', (req, res) => {
 
 const oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
 app.get(oldPaths, (req, res) => res.redirect(`https://data.holderdeord.no${req.path}`));
-
-
 
 const port = +(process.env.HTTP_PORT || 3000);
 
