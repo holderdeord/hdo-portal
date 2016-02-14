@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/portal*', function(req, res) {
-    res.render('index-prod', {hash});
+    res.render('index-prod', {hash: hash});
 });
 
 app.get('/robots.txt', function(req, res) {
