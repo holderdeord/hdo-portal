@@ -74,7 +74,17 @@ main {
         padding: 0 $default-padding;
     }
 
+    strong {
+        background-color: $hdo-highlight-color;
+        font-weight: normal;
+    }
+
     padding-bottom: $default-padding;
+
+    table {
+        @extend .table;
+        font-size: 0.9rem;
+    }
 }
 
 footer {
@@ -143,5 +153,10 @@ footer {
         box-shadow: 0 0 0 4px #fff,0 0 0 5px rgba(0,0,0,0.1),0 0 0 9px #fff,0 0 0 10px rgba(0,0,0,0.033);
         width: 128px;
         height: 128px;
+
+        @include media-breakpoint-down('md') {
+            width: 64px;
+            height: 64px;
+        }
     }
 }

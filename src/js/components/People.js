@@ -44,7 +44,7 @@ export default class People extends Component {
                     {right && <Person key={right.name} {...right} />}
                 </div>
 
-                <hr />
+                <hr className="hidden-sm-down" />
             </div>
         ))
     }

@@ -1,11 +1,11 @@
-import webpack from 'webpack';
-import WebpackDevServer from 'webpack-dev-server';
-import path from 'path';
-import config from './../webpack.dev.config';
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var path = require('path');
+var config = require('./../webpack.dev.config');
 
-const staticPath = path.join(__dirname, '../build');
+var staticPath = path.join(__dirname, '../build');
 
-const server = new WebpackDevServer(webpack(config), {
+var server = new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     debug: true,
     hot: true,

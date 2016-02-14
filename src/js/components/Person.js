@@ -5,11 +5,11 @@ export default (props) => (
     <div className="person">
         <div className="p-a-1">
             <div className="row">
-                <div className="col-md-4 text-sm-right">
+                <div className="col-xs-4 text-sm-right">
                     <img src={props.image} className="photo" />
                 </div>
 
-                <div className="col-md-7">
+                <div className="col-xs-7">
                     <h5>{props.name}</h5>
 
                     <p>{props.title}</p>
