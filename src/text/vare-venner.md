@@ -11,7 +11,7 @@ I 2011 inngikk Holder de ord et samarbeid med [NUUG (Norwegian Unix User Group)]
 | [NUUG Foundation][nuug]   | Juli 2015    | 48 610 kr  |
 | [Plastilin][plastilin]    | August 2013  | 40 000 kr  |
 | [Opera Software][opera]   | Mars 2013    | 10 000 kr  |
-| [Christen Sveaas][sveaas] | Februar 2013 | 30 000 kr  |
+| [Christen Sveaas][sveaas] | Februar 2013 | 50 000 kr  |
 | [NUUG Foundation][nuug]   | Februar 2013 | 35 000 kr  |
 | [Fritt Ord][fritt-ord]    | Februar 2013 | 100 000 kr |
 | [NUUG Foundation][nuug]   | Oktober 2012 | 65 000 kr  |

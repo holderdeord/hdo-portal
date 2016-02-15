@@ -10,7 +10,7 @@ export default (props) => (
                 </div>
 
                 <div className="col-xs-7">
-                    <h5>{props.name}</h5>
+                    <h5><mark>{props.name}</mark></h5>
 
                     <p>{props.title}</p>
 
