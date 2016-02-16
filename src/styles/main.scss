@@ -2,6 +2,11 @@
 
 $header-height: 6rem;
 
+html ::selection {
+    background-color: $hdo-highlight-color;
+}
+
+
 nav {
     header {
         font-family: $font-family-serif;
@@ -128,8 +133,8 @@ footer {
         .img {
             background-repeat: no-repeat;
             background-size: cover;
-            height: 200px;
             background-position: 50% 50%;
+            height: 200px;
         }
 
         .description {
