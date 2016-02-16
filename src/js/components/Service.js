@@ -1,4 +1,6 @@
-export defatul (service) => (
+import React from 'react';
+
+export default (service) => (
     <div className="service hdo-card m-y-1">
         <a href={service.url}>
             <div

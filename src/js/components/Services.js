@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fetch from 'isomorphic-fetch';
 import chunk from 'lodash.chunk';
+import Service from './Service';
 
 export default class Services extends Component {
     state = { services: [] };
