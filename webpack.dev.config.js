@@ -5,6 +5,9 @@ var autoprefixer = require('autoprefixer')
 var precss = require('precss')
 
 var writeHash = require('./src/js/utils/webpack-write-hash')
+var loaders = require('./src/js/utils/webpack-loaders')
+
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'eval',
@@ -22,25 +25,12 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            { test: /\.scss$/, loader: 'style!css!postcss!sass' },
-            { test: /\.css$/, loader: 'style!css' },
-
-            {
-                test: /\.js$/,
-                loaders: ['react-hot', 'babel'],
-                include: path.join(__dirname, 'src')
-            },
-
-            {
-                test:   /\.md$/,
-                loader: 'html!remarkable'
-            }
-        ]
+        loaders: loaders
     },
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin('bundle.css', {allChunks: true}),
         writeHash
     ],
 
