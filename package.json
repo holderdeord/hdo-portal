@@ -6,7 +6,7 @@
     "start": "node index.js",
     "dev": "node server/dev-server.js",
     "lint": "eslint components",
-    "build": "./node_modules/.bin/webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --bail --optimize-minimize --optimize-occurence-order --optimize-dedupe",
     "deploy": "ssh hdo@hdo02.holderdeord.no 'cd /webapps/hdo-portal && git pull --ff-only origin master && npm install && npm run build && mkdir -p tmp && touch tmp/restart.txt'"
   },
   "author": "jari@holderdeord.no",
