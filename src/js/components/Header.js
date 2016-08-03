@@ -14,6 +14,9 @@ export default class Header extends Component {
                         <li className="nav-item">
                             <Link className="nav-link" to="/portal/om-oss">Om oss</Link>
                         </li>
+                        <li className="nav-item highlight">
+                            <Link className="nav-link" to="/portal/stott-oss">Støtt oss</Link>
+                        </li>
                     </ul>
                 </header>
             </nav>
