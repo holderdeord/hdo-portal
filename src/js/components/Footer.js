@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Footer extends Component {
     render() {
         return (
             <footer>
                 <div>
-                    <a href="https://www.holderdeord.no/">
+                    <Link to="/portal">
                         <div className="hdo-logo" />
-                    </a>
+                    </Link>
 
                     <h4>Holder de ord &copy; {new Date().getFullYear()}</h4>
 
@@ -18,7 +19,7 @@ export default class Footer extends Component {
                     </div>
 
                     <p className="links">
-                        <a href="https://www.holderdeord.no/" alt="Holder de ord">holderdeord.no</a>
+                        <Link to="/portal" alt="Holder de ord">holderdeord.no</Link>
                         &nbsp;&middot;&nbsp;
                         <a href="https://twitter.com/holderdeord/" alt="Holder de ord på Twitter">@holderdeord</a>
                     </p>
