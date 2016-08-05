@@ -12,7 +12,7 @@ export default class SupportUs extends Component {
 
                             <div className="p-a-2">
                                 <p>
-                                    Holder de ord er et dugnadsprosjekt og vi er avhengig av din støtte for å finansiere organisasjonen og drift av nettsidene.
+                                    Holder de ord er et dugnadsprosjekt og vi er avhengig av din støtte for å finansiere organisasjonen og drift av våre tjenester.
                                 </p>
 
                                 <p>
