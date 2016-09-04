@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Text from './Text';
 
 export default class SupportUs extends Component {
     render() {
@@ -29,6 +30,21 @@ export default class SupportUs extends Component {
                         <img src="//files.holderdeord.no/images/hackaton.jpg" alt="" className="img-fluid" />
                     </div>
                 </div>
+
+                <div className="row hdo-card no-gutters m-t-3">
+                    <div className="col-md-12">
+                        <h3 className="hdo-card-header p-x-2">Bli med på årets viktigste dugnadsprosjekt</h3>
+                    </div>
+
+                    <div className="col-md-6">
+                        <Text name="bli-med-tekst" />
+                    </div>
+
+                    <div className="col-md-6">
+                        <Text name="bli-med-kalender" />
+                    </div>
+                </div>
+
             </div>
         )
     }
