@@ -33,7 +33,7 @@ app.get('/robots.txt', function(req, res) {
     res.render('robots');
 });
 
-var oldPaths = /^\/(admin|api|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
+var oldPaths = /^\/(admin|api|assets|categories|committees|districts|docs|healthz|home|info|issues|parliament-issues|parties|promises|propositions|questions|representative|representatives|search|users|votes|widgets).*/
 app.get(oldPaths, function(req, res) {
     res.redirect('https://data.holderdeord.no' + req.path)
 });
