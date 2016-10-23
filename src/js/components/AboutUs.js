@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Text from './Text';
 import People from './People';
+import ContactUs from './ContactUs';
 
 export default class AboutUs extends Component {
     render() {
@@ -10,6 +11,10 @@ export default class AboutUs extends Component {
                     <div className="col-lg-6 col-md-12">
                         <div className="hdo-card m-b-1">
                             <Text name="hva-vi-gjor" />
+                        </div>
+
+                        <div className="hdo-card m-b-1">
+                            <ContactUs />
                         </div>
                     </div>
 

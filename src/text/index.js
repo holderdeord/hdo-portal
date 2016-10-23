@@ -7,5 +7,5 @@ export default {
     'hva-vi-gjor': hvaViGjor,
     'vare-venner': vareVenner,
     'bli-med-tekst': bliMedTekst,
-    'bli-med-kalender': bliMedKalender
+    'bli-med-kalender': bliMedKalender,
 };
