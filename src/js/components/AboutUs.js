@@ -12,22 +12,18 @@ export default class AboutUs extends Component {
                         <div className="hdo-card m-b-1">
                             <Text name="hva-vi-gjor" />
                         </div>
-
-                        <div className="hdo-card m-b-1">
-                            <ContactUs />
-                        </div>
                     </div>
 
                     <div className="col-lg-6 hidden-md-down">
                         <div className="hdo-card m-b-1">
-                            <Text name="vare-venner" />
+                            <ContactUs />
                         </div>
                     </div>
                 </div>
 
                 <People />
 
-                <div className="hdo-card m-y-1 hidden-lg-up">
+                <div className="hdo-card m-y-1">
                     <Text name="vare-venner" />
                 </div>
             </div>
