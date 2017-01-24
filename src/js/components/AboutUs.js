@@ -27,7 +27,6 @@ export default class AboutUs extends Component {
                     <Text name="vare-venner" />
                 </div>
             </div>
-        )
+        );
     }
-
 }
