@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Text from './Text';
+import ContainerDimensions from 'react-container-dimensions';
 
 export default class SupportUs extends Component {
     render() {
@@ -41,7 +42,20 @@ export default class SupportUs extends Component {
                     </div>
 
                     <div className="col-md-6">
-                        <Text name="bli-med-kalender" />
+                        Høstens og vinterens meetup-kalender:
+
+                        <ContainerDimensions>
+                            {props =>
+                                <iframe
+                                    src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=holderdeord.no_gf48u1babjpe6bb1bsjkjbuhic%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=Europe%2FOslo"
+                                    style={{borderWidth: 0, padding: '1rem .5rem 1rem 0'}}
+                                    width={props.width}
+                                    height="400"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    />
+                            }
+                        </ContainerDimensions>
                     </div>
                 </div>
 

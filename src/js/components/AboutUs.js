@@ -23,7 +23,7 @@ export default class AboutUs extends Component {
 
                 <People />
 
-                <div className="hdo-card m-y-1">
+                <div className="hdo-card m-y-1" id="vare-venner">
                     <Text name="vare-venner" />
                 </div>
             </div>

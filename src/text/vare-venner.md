@@ -1,9 +1,5 @@
 ### Hvem som støtter oss
 
-#### Samarbeidspartnere
-
-I 2011 inngikk Holder de ord et samarbeid med [NUUG (Norwegian Unix User Group)](http://www.nuug.no/). I 2012 vant Holder de ord Reklame for Alvor-konkurransen i regi av bransjeorganisasjonen [Kreativt Forum](http://kreativtforum.no/). Holder de ords reklamekampanje ble laget av [Saatchi & Saatchi](https://saatchi.no/).
-
 #### Sponsorer og gaver
 
 | Hvem                      | Når          | Beløp      |
