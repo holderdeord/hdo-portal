@@ -16,11 +16,15 @@
 
 #### Kunder
 
-| Hvem             | Når  | Hva                        |
-| ---------------- | ---- | ----                       |
-| [NRK][nrk]       | 2013 | Widgetutvikling            |
-| [Tekna][tekna]   | 2013 | Widgetutvikling og analyse |
-| [Abelia][abelia] | 2013 | Analyse                    |
+| Hvem                                  | Når  | Hva                        |
+| --------------------------------------| ---- | ----                       |
+| [Tankesmien Agenda][agenda]           | 2017 | Analyse                    |
+| [Institutt for journalistikk][ij]     | 2017 | Foredrag                   |
+| [Høgskolen i Oslo og Akershus][hioa]  | 2017 | Utvikling og analyse       |
+| [Forbrukerrådet][forbrukerradet]      | 2017 | Analyse                    |
+| [NRK][nrk]                            | 2013 | Widgetutvikling            |
+| [Tekna][tekna]                        | 2013 | Widgetutvikling og analyse |
+| [Abelia][abelia]                      | 2013 | Analyse                    |
 
 [nuug]: http://www.nuug.no/
 [plastilin]: http://www.plastilin.no/
@@ -30,3 +34,7 @@
 [nrk]: http://www.nrk.no/
 [tekna]: https://www.tekna.no/
 [abelia]: http://abelia.no/
+[agenda]: https://tankesmienagenda.no/
+[ij]: http://www.ij.no/
+[hioa]: http://www.hioa.no/
+[forbrukerradet]: https://www.forbrukerradet.no/
