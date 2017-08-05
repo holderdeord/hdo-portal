@@ -84,6 +84,10 @@ main {
         padding: 0 $default-padding;
     }
 
+    ul {
+        padding-right: $default-padding;
+    }
+
     strong {
         background-color: $hdo-highlight-color;
         font-weight: normal;
