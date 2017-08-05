@@ -14,7 +14,7 @@ export default class AboutUs extends Component {
                         </div>
                     </div>
 
-                    <div className="col-lg-6 hidden-md-down">
+                    <div className="col-lg-6 col-md-12">
                         <div className="hdo-card m-b-1">
                             <ContactUs />
                         </div>
