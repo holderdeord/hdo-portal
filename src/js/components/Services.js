@@ -23,15 +23,13 @@ export default class Services extends Component {
 
         return (
             <div className="services">
-                {chunk(services, 2).map(serviceGroup => (
-                    <div className="row" key={serviceGroup.map(e => e.title).join()}>
-                        {serviceGroup.map(service => (
-                            <div className="col-lg-6" key={service.title}>
-                                <Service {...service} />
-                            </div>
-                        ))}
-                    </div>
-                ))}
+                <div className="row">
+                    {services.map(service => (
+                        <div className={`col-lg-${service.width === 'full' ? '12' : '6'}`} key={service.title}>
+                            <Service {...service} />
+                        </div>
+                    ))}
+                </div>
             </div>
         );
     }
