@@ -11,7 +11,7 @@ export default class App extends Component {
             <div>
                 <Header />
 
-                <div className="container" style={{ display: "none" }}>
+                <div className="container">
                     <div className="alert alert-info">
                         <p>
                             <strong>Holder de ord</strong> legges ned i løpet av
