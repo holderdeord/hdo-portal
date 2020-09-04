@@ -45,7 +45,7 @@
     "lodash-express": "0.0.3",
     "lodash.chunk": "^4.0.6",
     "lodash.partition": "^4.4.0",
-    "node-sass": "^3.8.0",
+    "node-sass": "^4.13.1",
     "path": "^0.12.7",
     "postcss": "^5.1.0",
     "postcss-loader": "^0.9.1",
