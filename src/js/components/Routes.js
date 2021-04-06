@@ -1,7 +1,7 @@
-import 'babel-polyfill';
+import "babel-polyfill";
 
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, { Component } from "react";
+import { render } from "react-dom";
 
 import {
     Router,
@@ -9,13 +9,13 @@ import {
     IndexRoute,
     Link,
     browserHistory as history,
-    Redirect
-} from 'react-router'
+    Redirect,
+} from "react-router";
 
-import App from './App'
-import Front from './Front'
-import AboutUs from './AboutUs'
-import SupportUs from './SupportUs'
+import App from "./App";
+import Front from "./Front";
+import AboutUs from "./AboutUs";
+import SupportUs from "./SupportUs";
 
 class Routes extends Component {
     render() {
@@ -24,13 +24,13 @@ class Routes extends Component {
                 <Redirect path="/" to="/portal" />
 
                 <Route path="/portal" component={App}>
-                  <IndexRoute component={Front} />
-                  <Route path="/portal/stott-oss" component={SupportUs} />
-                  <Route path="/portal/om-oss" component={AboutUs} />
+                    <IndexRoute component={Front} />
+                    {/* <Route path="/portal/stott-oss" component={SupportUs} />
+                  <Route path="/portal/om-oss" component={AboutUs} /> */}
                 </Route>
             </Router>
-        )
+        );
     }
 }
 
-render(<Routes />, document.getElementById('content'));
+render(<Routes />, document.getElementById("content"));

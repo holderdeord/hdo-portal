@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from "react";
+import { Link } from "react-router";
 
 export default class Footer extends Component {
     render() {
@@ -14,18 +14,31 @@ export default class Footer extends Component {
 
                     <div>
                         <small>
-                            Spørsmål? Ta <a href="mailto:kontakt@holderdeord.no" style={{textDecoration: 'underline'}}>kontakt</a>.
+                            Spørsmål? Ta{" "}
+                            <a
+                                href="mailto:kontakt@holderdeord.no"
+                                style={{ textDecoration: "underline" }}
+                            >
+                                kontakt
+                            </a>
+                            .
                         </small>
                     </div>
 
                     <p className="links">
-                        <Link to="/portal" alt="Holder de ord">holderdeord.no</Link>
+                        <Link to="/portal" alt="Holder de ord">
+                            holderdeord.no
+                        </Link>
                         &nbsp;&middot;&nbsp;
-                        <a href="https://twitter.com/holderdeord/" alt="Holder de ord på Twitter">@holderdeord</a>
+                        <a
+                            href="https://twitter.com/holderdeord/"
+                            alt="Holder de ord på Twitter"
+                        >
+                            @holderdeord
+                        </a>
                     </p>
                 </div>
             </footer>
         );
     }
 }
-

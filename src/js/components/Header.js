@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from "react";
+import { Link } from "react-router";
 
 export default class Header extends Component {
     render() {
@@ -10,16 +10,20 @@ export default class Header extends Component {
                         <div className="hdo-logo">Holder de ord</div>
                     </Link>
 
-                    <ul className="nav navbar-nav pull-sm-right">
+                    {/* <ul className="nav navbar-nav pull-sm-right">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/portal/om-oss">Om oss</Link>
+                            <Link className="nav-link" to="/portal/om-oss">
+                                Om oss
+                            </Link>
                         </li>
                         <li className="nav-item highlight">
-                            <Link className="nav-link" to="/portal/stott-oss">Støtt oss</Link>
+                            <Link className="nav-link" to="/portal/stott-oss">
+                                Støtt oss
+                            </Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </header>
             </nav>
-        )
+        );
     }
 }

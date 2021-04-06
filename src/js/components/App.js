@@ -8,29 +8,32 @@ import Footer from "./Footer";
 export default class App extends Component {
     render() {
         return (
-            <div>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    alignItems: "center",
+                }}
+            >
                 <Header />
 
                 <div className="container">
-                    <div className="alert alert-info">
-                        <p>
-                            <strong>Holder de ord</strong> legges ned i løpet av
-                            2020.
-                        </p>
-                        <p>
-                            Tjenestene <em>Sagt i salen</em>, <em>Enighet</em>{" "}
-                            og
-                            <em>Partipisken</em>
-                            {" "}
-                            mottar fremdeles data og viser oppdatert
-                            informasjon. Andre tjenester vil ikke bli oppdatert.
-                        </p>
+                    <div
+                        style={{
+                            background: "#eee",
+                            padding: "1rem 2rem",
+                            textAlign: "center",
+                            margin: "1rem 0",
+                        }}
+                    >
+                        <strong>Holder de ord</strong> er avviklet. Styret har
+                        en dialog med en interessent om mulig overtagelse av
+                        tjenestene.
                     </div>
                 </div>
 
                 <main>{this.props.children}</main>
-
-                <Footer />
             </div>
         );
     }
