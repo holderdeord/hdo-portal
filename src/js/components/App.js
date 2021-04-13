@@ -3,7 +3,6 @@ import "../../styles/main.scss";
 import React, { Component } from "react";
 
 import Header from "./Header";
-import Footer from "./Footer";
 
 export default class App extends Component {
     render() {
@@ -30,10 +29,18 @@ export default class App extends Component {
                         <strong>Holder de ord</strong> er avviklet. Styret har
                         en dialog med en interessent om mulig overtagelse av
                         tjenestene.
+                        <div>
+                            Spørsmål? Ta{" "}
+                            <a
+                                href="mailto:kontakt@holderdeord.no"
+                                style={{ textDecoration: "underline" }}
+                            >
+                                kontakt
+                            </a>
+                            .
+                        </div>
                     </div>
                 </div>
-
-                <main>{this.props.children}</main>
             </div>
         );
     }
